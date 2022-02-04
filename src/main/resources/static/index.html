@@ -1,37 +1,117 @@
 <!DOCTYPE html>
-<!--
+<!-- Se actualiza la página index para que contenga nuevas etiquetas meta y demás para la semántica del body-->
 Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
 Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
--->
-<html>
+
+<html lang="es">
     <head>
         <title>Tienda en línea</title>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Página principal de la tiena TechShop">
+        <meta name="keywords" content="TechShop, html5, css3">
+        <link href="css/estilos.css" 
+              rel="stylesheet" 
+              type="text/css"/>
+        
     </head>
     <body>
-        <a href="ejemplo9.html">Back</a>
-        <a href="index.html">Home</a>
-        <a href="ejemplo2.html">Next</a>
-        <div>
-        <h1 style="text-align: center">Home</h1>
-        <p>Esta es la primera pagina del curso Web y patrones...</p>
-        </div>
-        
-        <p style="text-align: left">Lorem ipsum dolor sit amet consectetur adipiscing elit habitasse tincidunt, porttitor dignissim tortor aenean 
+        <header id="encabezado"> <!-- Etiqueta para ofrecerle al browser info de que es un encabezado -->
+            <h2>TechShop</h2>
+        </header>
+        <nav id="menu"> <!-- Esta etiqueta es para ilustrarle al browser que posiblemente es un menú -->
+            <a href="ejemplo9.html">Back</a>
+            <a href="index.html">Home</a>
+            <a href="ejemplo2.html">Next</a>
+        </nav>
+        <aside id="barralateral"> <!-- Etiqueta para indicar que es una barra lateral al final, puede ir a la izquierda o a la derecha, y pueden ser varias  -->
+            <h2>Últimas noticias</h2>
+            <p>Viverra platea mus semper leo eget et blandit pellentesque aliquet, ut aliquam cum gravida id euismod vivamus vel ac per, dignissim vehicula interdum fames phasellus facilisi facilisis lacus. Lobortis risus magna facilisis pellentesque quam nunc quisque nostra mattis in orci suscipit bibendum metus litora ullamcorper, egestas dictum imperdiet tortor libero sollicitudin diam convallis justo tellus sociis elementum nam hendrerit eros. Ac pulvinar sagittis at tempus sed est aenean dui fusce ridiculus malesuada porttitor ad erat, quam auctor tellus natoque dis rhoncus quisque mollis sodales tristique pretium taciti gravida.</p>
+        </aside>
+        <section id="contenido">
+        <h1>Nuestros productos</h1>
+        <article>
+        <header>Desktop XRT 5000</header>
+        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit habitasse tincidunt, porttitor dignissim tortor aenean 
         torquent et phasellus risus etiam, netus elementum aliquam hendrerit feugiat bibendum arcu iaculis. Ligula platea 
         dignissim sociis tincidunt quisque vel facilisi mus potenti imperdiet leo magna, faucibus hendrerit velit nec praesent 
         volutpat vestibulum convallis vulputate viverra. Integer inceptos etiam euismod nulla sociosqu sagittis ridiculus, nisi 
         hendrerit habitant fusce tempus conubia justo mattis, luctus felis malesuada suscipit parturient massa.
-        <p style="text-align: right">Sodales litora accumsan fusce duis dis facilisi pretium facilisis luctus, odio senectus hac tristique taciti tortor 
+        <figure>
+            <img src="images/Equipo1.jpg" alt="Desktop XRT 5000" width="200"/>
+            <figcaption>Más vendido</figcaption>
+        </figure>
+        <footer>Agregar al carrito</footer>
+        </article>
+        <br>
+        <article>
+        <header>Alienware ADT 9000</header>
+        <p> Está inspirada en la película <cite>Alien el séptimo pasajero </cite>Sodales litora accumsan fusce duis dis facilisi pretium facilisis luctus, odio senectus hac tristique taciti tortor 
         tempor et natoque, id magnis habitant neque egestas eu laoreet vivamus. Integer purus semper eget scelerisque magnis tempor 
         sapien varius, neque elementum nisi mauris fusce non arcu, vulputate dui nulla id vel imperdiet fringilla. Ligula pulvinar 
         hendrerit mus himenaeos parturient commodo, nec nisi pharetra dignissim cubilia aliquet, purus magnis at primis integer, 
         convallis ad curae inceptos quis.
-        <p style="text-align: center">Himenaeos ad interdum in primis purus nisi fames sociosqu orci, cum ut curae bibendum quisque condimentum placerat
+        <figure>
+            <img src="images/Equipo2.jpg" alt="Alienware" width="200"/>
+            <figcaption>Diseñado para gamers</figcaption>
+        </figure>
+        <footer>Agregar al carrito</footer>
+        </article>
+        <br>
+        <article>
+        <header>Impresora 3D portable</header>
+        <p>Himenaeos ad interdum in primis purus nisi fames sociosqu orci, cum ut curae bibendum quisque condimentum placerat
         id est, tempor integer enim suscipit dapibus pretium sed imperdiet. Vel vivamus pharetra lacinia vulputate sapien phasellus 
         curabitur primis luctus, nec magnis fames posuere pulvinar mus orci nullam nibh conubia, aliquet pellentesque quisque 
         congue ante ad risus metus. Metus euismod cras maecenas enim odio viverra scelerisque, vulputate sociis convallis 
         habitasse quam pellentesque, felis risus laoreet nisl ornare tempor.
+        <figure>
+            <img src="images/Equipo3.jpg" alt="Impresora 3D" width="200"/>
+            <figcaption>Más económico</figcaption>
+        </figure>
+        <footer>Agregar al carrito</footer>
+        </article>
+        <article>
+            <header>
+                <h2>Resumen de líneas</h2>
+                <table border="0">
+                    <thead>
+                        <tr id="encabezadoTabla">
+                            <th>Código</th>
+                            <th>Detalle</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaDetalle">
+                        <tr>
+                            <td>1</td>
+                            <td>Aliquam turpis elementum taciti phasellus</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>mattis tellus metus aenean, nec netus rutrum</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>ridiculus nullam quisque ad lobortis purus, </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>litora ante tristique aptent blandit velit augue.</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Egestas a aliquet rhoncus justo lobortis hac </td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>eget arcu parturient aliquam hendrerit ridiculus.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </header>
+        </article>
+        </section>
+        <footer id="piepagina">
+            Derechos reservados &COPY; 2022, Teléfono <address style="display: inline">8899-7766</address>
+        </footer>
     </body>
 </html>
