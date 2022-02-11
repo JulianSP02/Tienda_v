@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!-- Se actualiza la página index para que contenga nuevas etiquetas meta y demás para la semántica del body-->
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+
+<html lang="es">
+    <head>
+        <title>TechShop</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Página principal de la tiena TechShop">
+        <meta name="keywords" content="TechShop, html5, css3">
+        <link href="css/estilos.css" 
+              rel="stylesheet" 
+              type="text/css"/>
+        
+    </head>
+    <body>
+        <header id="encabezado"> <!-- Etiqueta para ofrecerle al browser info de que es un encabezado -->
+            <h1>Ejemplo de uso de videos</h1>
+        </header>
+        <nav id="menu"> <!-- Esta etiqueta es para ilustrarle al browser que posiblemente es un menú -->
+            <a href="ejemplo9.html">Back</a>
+            <a href="index.html">Home</a>
+            <a href="ejemplo2.html">Next</a>
+        </nav>
+        <aside id="barralateral"> <!-- Etiqueta para indicar que es una barra lateral al final, puede ir a la izquierda o a la derecha, y pueden ser varias  -->
+            <h2>Últimas noticias</h2>
+            <p>Viverra platea mus semper leo eget et blandit pellentesque aliquet, ut aliquam cum gravida id euismod vivamus vel ac per, dignissim vehicula interdum fames phasellus facilisi facilisis lacus. Lobortis risus magna facilisis pellentesque quam nunc quisque nostra mattis in orci suscipit bibendum metus litora ullamcorper, egestas dictum imperdiet tortor libero sollicitudin diam convallis justo tellus sociis elementum nam hendrerit eros. Ac pulvinar sagittis at tempus sed est aenean dui fusce ridiculus malesuada porttitor ad erat, quam auctor tellus natoque dis rhoncus quisque mollis sodales tristique pretium taciti gravida.</p>
+        </aside>
+        <section id="contenido">
+        <h2>Ejemplo de videos</h2>
+        <article>
+            <header><h3>Trailes de la película Torpedo</h3></header>
+        <figure>
+            <video width="320" height="240" controls poster="recursos/images/torpedo.jpg">
+                <source src="recursos/videos/torpedo.mp4" type="video/mp4">
+                Su browser no soporta videos en este formato<code>video</code>.
+            </video>
+            <figcaption>
+                <p>Realizada en 2021</p>
+            </figcaption>
+        </figure>
+        </article>
+        </section>
+        <footer id="piepagina">
+            Derechos reservados &COPY; 2022, Teléfono <address style="display: inline">8899-7766</address>
+        </footer>
+    </body>
+</html>

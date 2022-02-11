@@ -9,20 +9,24 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <meta charset="UTF-8">
         <meta name="description" content="Página principal de la tiena TechShop">
         <meta name="keywords" content="TechShop, html5, css3">
-        <link href="css/estilos.css" 
-              rel="stylesheet" 
-              type="text/css"/>
-        
+        <link href="css/menu.css" rel="stylesheet" type="text/css"/>
+         
     </head>
     <body>
-        <header id="encabezado"> <!-- Etiqueta para ofrecerle al browser info de que es un encabezado -->
-            <h2>TechShop</h2>
-        </header>
-        <nav id="menu"> <!-- Esta etiqueta es para ilustrarle al browser que posiblemente es un menú -->
-            <a href="ejemplo9.html">Back</a>
-            <a href="index.html">Home</a>
-            <a href="ejemplo2.html">Next</a>
+        <header class="header"> 
+        <nav class="nav">
+            <a href="index.html" class="logo nav-link">TechShop</a>
+            <ul class="nav-menu">
+                <li class="nav-menu-item"><a href="ejemplo9.html" class="nav-menu-link nav-link">&LeftTriangleBar;</a></li>
+                <li class="nav-menu-item"><a href="ejemplo2.html" class="nav-menu-link nav-link">&RightTriangleBar;</a></li>
+                <li class="nav-menu-item"><a href="audios.html" class="nav-menu-link nav-link">Audios</a></li>
+                <li class="nav-menu-item"><a href="videos.html" class="nav-menu-link nav-link">Videos</a></li>
+                <li class="nav-menu-item"><a href="iframes.html" class="nav-menu-link nav-link">iFrames</a></li>
+                <li class="nav-menu-item"><a href="formulario.html" class="nav-menu-link nav-link">Form</a></li>
+            </ul>
         </nav>
+        </header>
+        
         <aside id="barralateral"> <!-- Etiqueta para indicar que es una barra lateral al final, puede ir a la izquierda o a la derecha, y pueden ser varias  -->
             <h2>Últimas noticias</h2>
             <p>Viverra platea mus semper leo eget et blandit pellentesque aliquet, ut aliquam cum gravida id euismod vivamus vel ac per, dignissim vehicula interdum fames phasellus facilisi facilisis lacus. Lobortis risus magna facilisis pellentesque quam nunc quisque nostra mattis in orci suscipit bibendum metus litora ullamcorper, egestas dictum imperdiet tortor libero sollicitudin diam convallis justo tellus sociis elementum nam hendrerit eros. Ac pulvinar sagittis at tempus sed est aenean dui fusce ridiculus malesuada porttitor ad erat, quam auctor tellus natoque dis rhoncus quisque mollis sodales tristique pretium taciti gravida.</p>
