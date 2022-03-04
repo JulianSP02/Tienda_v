@@ -3,10 +3,11 @@
       xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <title>TechShop</title>
-        <meta charset="UTF-8">
+        <meta charset="UTF-8"/>
     </head>
     <body>
-        <h1>Datos del cliente</h1>
+        <header th:replace="plantilla/plantilla :: header"/>
+        <h2>Datos del cliente</h2>
         <a th:href="@{/}">Regresar</a>
         <form method="post"
               th:action="@{/guardarCliente}"
@@ -26,6 +27,6 @@
             <br/>
             <input type="submit" name="guardar" value="Guardar"/>
         </form>
-        
+        <footer th:replace="plantilla/plantilla :: footer"/>
     </body>
 </html>

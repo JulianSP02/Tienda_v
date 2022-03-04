@@ -2,10 +2,12 @@
 <html xmlns:th="http://www.thymeleaf.org">
     <head>
         <title>TechShop</title>
-        <meta charset="UTF-8">
+        <meta charset="UTF-8"/>
     </head>
     <body>
-        <h1>Gestión de clientes</h1>
+        <header th:replace="plantilla/plantilla :: header"/>
+            
+        <h2>Gestión de clientes</h2>
         
         <a th:href="@{/nuevoCliente}">Nuevo cliente</a>
         <di th:if="${clientes != null and !clientes.empty}">
@@ -31,9 +33,10 @@
                 </tr>
             </tbody>
         </table>
-        </di>
-        <di th:if="${clientes == null or clientes.empty}">
+        </dvi>
+        <div th:if="${clientes == null or clientes.empty}">
         No tenemos lista de clientes que mostrar...
-        </di>
+        </div>
+        <footer th:replace="plantilla/plantilla :: footer"/>
     </body>
 </html>
