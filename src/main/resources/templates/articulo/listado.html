@@ -8,34 +8,37 @@
     <body>
         <header th:replace="plantilla/plantilla :: header"/>
         <div class="contenido">    
-        <h2>Gestión de clientes</h2>
-        
-        <a th:href="@{/cliente/nuevo}">Nuevo cliente</a>
-        <di th:if="${clientes != null and !clientes.empty}">
+        <h2 th:text="#{articulo.titulo}">Listado de articulos</h2>       
+        <a th:href="@{/articulo/nuevo}" th text="#{articulo.nuevo}">Nuevo articulo</a>
+        <div th:if="${articulos != null and !articulos.empty}">
         <table border="1">
             <thead>
                 <tr>
-                    <th>Nombre</th>
-                    <th>Apellidos</th>
-                    <th>Correo</th>
-                    <th>Teléfono</th>
-                    <th>Eliminar</th>
-                    <th>Modificar</th>
+                    <th th text="#{articulo.descripcion}">Descripcion</th>
+                    <th th text="#{articulo.precio}">Precio</th>
+                    <th th text="#{articulo.existencias}">Existencias</th>
+                    <th th text="#{articulo.activo}">Activa</th>
+                    <th th text="#{accion.eliminar}">Eliminar</th>
+                    <th th text="#{accion.actualizar}">Actualizar</th>
                 </tr>
             </thead>
             <tbody>
-                <tr th:each="cliente : ${clientes}">
-                    <td th:text="${cliente.nombre}"></td>
-                    <td th:text="${cliente.apellidos}"></td>
-                    <td th:text="${cliente.correo}"></td>
-                    <td th:text="${cliente.telefono}"></td>
-                    <td><a th:href="@{/cliente/eliminar/} + ${cliente.idCliente}">Eliminar</a></td>
-                    <td><a th:href="@{/cliente/modificar/} + ${cliente.idCliente}">Modificar</a></td>
+                <tr th:each="articulo : ${articulos}">
+                    <td th:text="${articulo.descripcion}"></td>
+                    <td th:text="${#numbers.formatDecimal(articulo.precio,3,2)}"
+                        style="text-align: right"></td>
+                    <td th:text="${articulo.existencias}"
+                        style="text-align: center"></td>
+                        <td><input type="checkbox" name="activa" th:checked="${articulo.activo}" disabled="true"></td>
+                    <td><a th:href="@{/articulo/eliminar/} + ${articulo.idCliente}"
+                           th:text="#{accion.eliminar}">Eliminar</a></td>
+                    <td><a th:href="@{/articulo/actualizar/} + ${articulo.idCliente}"
+                           th:text="#{accion.actualizar">Modificar</a></td>
                 </tr>
             </tbody>
         </table>
-        <div th:if="${clientes == null or clientes.empty}">
-            No tenemos lista de clientes que mostrar...
+        <div th:if="${articulos == null or articulos.empty}">
+            <p th:text="#{articulo.no_mostrar}">No tenemos articulos que mostrar...</p>
         </div>
         </div>
         <footer th:replace="plantilla/plantilla :: footer"/>
