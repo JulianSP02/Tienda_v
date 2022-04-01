@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org"
-      xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://wwww.thymeleaf.org" 
+      xmlns:sec="http://thymeleaft.org/extras/spring-security">
     <head>
         <title>TechShop</title>
         <meta charset="UTF-8"/>
@@ -19,7 +20,7 @@
                 <input type="text" name="descripcion" th:field="*{descripcion}"/>
                 <br/>
                 
-                <label for="activo" th:text="#{categoria.activo">Activo: </label>
+                <label for="activo" th:text="#{categoria.activo}">Activo: </label>
                 <input type="checkbox" name="activo" th:field="*{activo}"/>
  
                 <br/>
