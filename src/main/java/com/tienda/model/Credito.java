@@ -19,7 +19,7 @@ public class Credito implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id_credito")
-    private Double limite;
+    public double limite;
     
     /*@JoinColumn(name="id_credito", referencedColumnName = "id_credito")
     @ManyToOne*/

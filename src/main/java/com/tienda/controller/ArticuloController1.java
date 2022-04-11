@@ -3,6 +3,7 @@ package com.tienda.controller;
 import com.tienda.dao.ArticuloDao;
 import com.tienda.model.Articulo;
 import com.tienda.services.ArticuloService;
+import com.tienda.services.CategoriaService;
 import java.util.Arrays;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,6 +20,9 @@ public class ArticuloController1 {
     @Autowired
     private ArticuloService articuloService;
     
+    @Autowired
+    private CategoriaService categoriaService;
+    
     @GetMapping("/articulo/listado")
     public String inicio(Model model){
         var articulos = articuloService.getArticulos(true);
@@ -27,7 +31,9 @@ public class ArticuloController1 {
     }
     
     @GetMapping("/articulo/nuevo")
-    public String nuevoArticulo(Articulo articulo){
+    public String nuevoArticulo(Articulo articulo,Model model){
+        var categorias = categoriaService.getCategorias(true);
+        model.addAttribute("categorias",categorias);
         return "articulo/modificar";
     }
     

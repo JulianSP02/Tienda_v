@@ -2,10 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://wwww.thymeleaf.org" 
       xmlns:sec="http://thymeleaft.org/extras/spring-security">
-    <head>
+    <head th:replace="plantilla/plantilla :: head">
         <title>TechShop</title>
-        <meta charset="UTF-8"/>
-        <link href="/css/menu.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
         <header th:replace="plantilla/plantilla :: header"/>
@@ -16,12 +14,12 @@
                 
                 <input type="hidden" name="idArticulo" th:field="*{idArticulo}"/>
                 
-                <label for="categoria" th:text="#{articulo.categoria}">Categoria: </label>
-                <select th:field="*{idCategoria}">
+                <label for="idCategoria" th:text="#{articulo.categoria}">Categoría:</label>
+                <select class="custom-select" name="idCategoria">
                     <option th:each="categoria: ${categorias}"
                             th:value="${categoria.idCategoria}"
                             th:text="${categoria.descripcion}"/>
-                </select><br/>
+                </select>
                 
                 <label for="descripcion" th:text="${articulo.descripcion}">Descripcion: </label>
                 <input type="text" name="descripcion" th:field="*{descripcion}"/>
